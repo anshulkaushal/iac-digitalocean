@@ -1,0 +1,17 @@
+# Copy to terraform.tfvars and fill in values:
+#   cp terraform.tfvars.example terraform.tfvars
+
+do_token = "dop_v1_your_api_token_here"
+
+droplet_name = "ubuntu-basic"
+region       = "nyc1"
+size         = "s-1vcpu-1gb"
+image        = "ubuntu-22-04-x64"
+
+# Add SSH key IDs from: doctl compute ssh-key list
+# ssh_key_ids = ["12345678"]
+
+tags = ["iac", "terraform", "dev"]
+
+monitoring = true
+ipv6       = true
