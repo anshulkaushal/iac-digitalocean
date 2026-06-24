@@ -30,8 +30,9 @@ resource "digitalocean_droplet" "ubuntu" {
     }
 
     inline = [
+      "sed -i 's/\\r$//' /tmp/provision.sh",
       "chmod +x /tmp/provision.sh",
-      "/tmp/provision.sh",
+      "bash /tmp/provision.sh",
     ]
   }
 }
