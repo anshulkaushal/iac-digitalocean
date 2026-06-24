@@ -51,3 +51,15 @@ variable "ipv6" {
   type        = bool
   default     = true
 }
+
+variable "ssh_user" {
+  description = "SSH user for the provisioner connection."
+  type        = string
+  default     = "root"
+}
+
+variable "ssh_private_key_path" {
+  description = "Path to the SSH private key used by the provisioner."
+  type        = string
+  default     = "~/.ssh/id_ed25519"
+}
